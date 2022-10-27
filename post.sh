@@ -13,7 +13,9 @@ read n
 
 if [[ ( $n == "Y" || $n == "y" ) ]]
 then
-curl -fsSL https://tailscale.com/install.sh | sh
+#Tailscale
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
 else
 echo "Okay, Fine with me..."
 fi
