@@ -6,6 +6,9 @@ then
  exit 1
 fi
 
+## curl install
+apt install curl
+
 ## tailsclae install
 
 echo "Would you like to install tailscale? Y/n"
